@@ -1,9 +1,6 @@
 # Palindrome tech challenge
 - Run all in one jar: ```java -jar palindrome-1.0.jar```
 - Fresh build and test:```./mvnw clean install```
-### Testing using Postman
-- ![Valid palindrome](https://github.com/rabzobi/palindrome/images/valid.png)
-- ![Invalid palindrom](https://github.com/rabzobi/palindrome/images/invalid.png)
 
 ### Features:
 1. REST service using json request and response
@@ -24,3 +21,7 @@
 A cache cleanup policy needs to be implemented:
 - TLRU: Time aware least recently used
 - LFRU: Least frequent recently used
+
+### Testing using Postman
+- ![Valid palindrome](https://github.com/rabzobi/palindrome/blob/main/images/valid.png)
+- ![Invalid palindrome](https://github.com/rabzobi/palindrome/blob/main/images/invalid.png)
