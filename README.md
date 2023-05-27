@@ -22,6 +22,8 @@ A cache cleanup policy needs to be implemented:
 - TLRU: Time aware least recently used
 - LFRU: Least frequent recently used
 
-### Testing using Postman
-- ![Valid palindrome](https://github.com/rabzobi/palindrome/blob/main/images/valid.png)
-- ![Invalid palindrome](https://github.com/rabzobi/palindrome/blob/main/images/invalid.png)
+## Testing using Postman
+### Valid
+![Valid palindrome](https://github.com/rabzobi/palindrome/blob/main/images/valid.png)
+### Invalid
+![Invalid palindrome](https://github.com/rabzobi/palindrome/blob/main/images/invalid.png)
