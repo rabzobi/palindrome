@@ -44,12 +44,13 @@ public class PalindromeStorageImpl implements PalindromeStorage {
     @Async
     public void save(PalindromeResponse palindromeResponse) {
         LOG.info("Saving: "+palindromeResponse+" to "+ CACHE_FILE);
-        try {
-            bufferedWriter.write(palindromeResponse.toString());
-            bufferedWriter.newLine();
-            bufferedWriter.flush();
-        } catch (IOException e) {
-            LOG.log(Level.WARNING,"Error writing "+palindromeResponse+" to "+ CACHE_FILE);
+        synchronized (bufferedWriter) {
+            try {
+                bufferedWriter.write(palindromeResponse.toString()+"\n");
+                bufferedWriter.flush();
+            } catch (IOException e) {
+                LOG.log(Level.WARNING, "Error writing " + palindromeResponse + " to " + CACHE_FILE);
+            }
         }
     }
 
