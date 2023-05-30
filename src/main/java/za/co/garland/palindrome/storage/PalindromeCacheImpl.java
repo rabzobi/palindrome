@@ -7,15 +7,15 @@ import za.co.garland.palindrome.model.PalindromeResponse;
 import za.co.garland.palindrome.utils.PalindromeCheck;
 import za.co.garland.palindrome.utils.PalindromeCheckImpl;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 @Component
 public class PalindromeCacheImpl implements PalindromeCache {
     private static final Logger LOG = Logger.getLogger(PalindromeCacheImpl.class.getName());
 
-    private final Map<String, PalindromeResponse> cache = new HashMap<>();
+    private final Map<String, PalindromeResponse> cache = new ConcurrentHashMap<>();
 
     PalindromeCheck palindromeCheck;
 
